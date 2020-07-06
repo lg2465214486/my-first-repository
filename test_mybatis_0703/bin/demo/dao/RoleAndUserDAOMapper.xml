@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demo.dao.IRoleAndUserDAO">
+	
+	<resultMap id="userResultMap" type="demo.entity.Users">
+			<id column="u_id" property="u_id"/>
+			<result column="u_name" property="uname"/>
+			<result column="u_pwd" property="upwd"/>  
+			<result column="realname" property="realname"/>    
+			<association property="roles" javaType="demo.entity.Roles">
+				<id property="rid" column="r_id"></id>
+				<result property="rolename" column="rolename"></result>
+				<result property="demo" column="demo"></result>
+			</association>
+	</resultMap>
+	
+	<select id="queryAllUser" parameterType="java.lang.String" resultType="demo.entity.Users">
+		select 
+		u_id as u_id,u_name as uname,u_pwd as upwd ,realname as realname 
+		from t_users where u_id in
+		(select userid from t_user_role where roleid in
+		(select r_id from t_roles where rolename=#{rolename}))
+	</select>
+	
+	<!-- 使用SQL语句查询角色id为’3’的用户姓名和其真实姓名； -->
+	<select id="queryAllUserforId" parameterType="int" resultMap="userResultMap">
+		select 
+		*
+		from t_users tu inner join t_user_role tur on tu.u_id=tur.userid
+		inner join t_roles tr on tur.roleid=tr.r_id
+		where tr.r_id=#{rid}
+	</select>
+	
+	<!-- 使用SQL语句查询角色id不为为’3’的用户姓名和其真实姓名； -->
+	<select id="queryAllUserNotforId" resultMap="userResultMap">
+		select 
+		*
+		from t_users tu inner join t_user_role tur on tu.u_id=tur.userid
+		inner join t_roles tr on tur.roleid=tr.r_id
+		where tr.r_id!=3
+	</select>
+	
+	<select id="queryAllUserforCount" resultType="int">
+		select count(distinct userid) from t_user_role
+	</select>
+</mapper>

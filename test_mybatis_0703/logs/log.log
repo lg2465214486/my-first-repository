@@ -1,0 +1,72 @@
+2020-07-04 19:08:52,734 [main] DEBUG [org.apache.ibatis.logging.LogFactory] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-07-04 19:08:53,149 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:08:53,149 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:08:53,150 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:08:53,150 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:09:14,194 [main] DEBUG [org.apache.ibatis.logging.LogFactory] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-07-04 19:09:14,483 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:09:14,484 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:09:14,484 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:09:14,484 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:09:14,653 [main] DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] - Opening JDBC Connection
+2020-07-04 19:09:15,058 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - Created connection 433785373.
+2020-07-04 19:09:15,058 [main] DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@19db0a1d]
+2020-07-04 19:09:15,062 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - ==>  Preparing: select u_id as u_id,u_name as uname,u_pwd as upwd ,realname as realname from t_users where u_id in (select userid from t_user_role where roleid in (select r_id from t_roles where rolename=?)) 
+2020-07-04 19:09:15,242 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - ==> Parameters: super管理员(String)
+2020-07-04 19:09:15,304 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - <==      Total: 2
+2020-07-04 19:33:50,231 [main] DEBUG [org.apache.ibatis.logging.LogFactory] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-07-04 19:33:50,544 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:33:50,545 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:33:50,545 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:33:50,545 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:35:59,131 [main] DEBUG [org.apache.ibatis.logging.LogFactory] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-07-04 19:35:59,421 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:35:59,422 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:35:59,422 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:35:59,422 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:35:59,605 [main] DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] - Opening JDBC Connection
+2020-07-04 19:35:59,941 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - Created connection 1536551745.
+2020-07-04 19:35:59,942 [main] DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@5b95eb41]
+2020-07-04 19:35:59,946 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - ==>  Preparing: select u_id as u_id,u_name as uname,u_pwd as upwd ,realname as realname from t_users where u_id in (select userid from t_user_role where roleid in (select r_id from t_roles where rolename=?)) 
+2020-07-04 19:36:00,152 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - ==> Parameters: super管理员(String)
+2020-07-04 19:36:00,204 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - <==      Total: 2
+2020-07-04 19:36:00,205 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforId] - ==>  Preparing: select * from t_users tu inner join t_user_role tur on tu.u_id=tur.userid inner join t_roles tr on tur.roleid=tr.r_id where tr.r_id=? 
+2020-07-04 19:36:00,205 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforId] - ==> Parameters: 2(Integer)
+2020-07-04 19:36:00,210 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforId] - <==      Total: 2
+2020-07-04 19:40:48,973 [main] DEBUG [org.apache.ibatis.logging.LogFactory] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-07-04 19:40:49,263 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:40:49,264 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:40:49,264 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:40:49,264 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 19:40:49,440 [main] DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] - Opening JDBC Connection
+2020-07-04 19:40:49,769 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - Created connection 751760013.
+2020-07-04 19:40:49,770 [main] DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@2ccef28d]
+2020-07-04 19:40:49,772 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - ==>  Preparing: select u_id as u_id,u_name as uname,u_pwd as upwd ,realname as realname from t_users where u_id in (select userid from t_user_role where roleid in (select r_id from t_roles where rolename=?)) 
+2020-07-04 19:40:49,930 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - ==> Parameters: super管理员(String)
+2020-07-04 19:40:49,984 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - <==      Total: 2
+2020-07-04 19:40:49,985 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforId] - ==>  Preparing: select * from t_users tu inner join t_user_role tur on tu.u_id=tur.userid inner join t_roles tr on tur.roleid=tr.r_id where tr.r_id=? 
+2020-07-04 19:40:49,986 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforId] - ==> Parameters: 2(Integer)
+2020-07-04 19:40:49,991 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforId] - <==      Total: 2
+2020-07-04 19:40:49,992 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserNotforId] - ==>  Preparing: select * from t_users tu inner join t_user_role tur on tu.u_id=tur.userid inner join t_roles tr on tur.roleid=tr.r_id where tr.r_id!=3 
+2020-07-04 19:40:49,992 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserNotforId] - ==> Parameters: 
+2020-07-04 19:40:50,001 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserNotforId] - <==      Total: 4
+2020-07-04 21:08:51,753 [main] DEBUG [org.apache.ibatis.logging.LogFactory] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2020-07-04 21:08:52,057 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 21:08:52,058 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 21:08:52,058 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 21:08:52,058 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - PooledDataSource forcefully closed/removed all connections.
+2020-07-04 21:08:52,250 [main] DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] - Opening JDBC Connection
+2020-07-04 21:08:52,566 [main] DEBUG [org.apache.ibatis.datasource.pooled.PooledDataSource] - Created connection 557404836.
+2020-07-04 21:08:52,566 [main] DEBUG [org.apache.ibatis.transaction.jdbc.JdbcTransaction] - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@213952a4]
+2020-07-04 21:08:52,570 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - ==>  Preparing: select u_id as u_id,u_name as uname,u_pwd as upwd ,realname as realname from t_users where u_id in (select userid from t_user_role where roleid in (select r_id from t_roles where rolename=?)) 
+2020-07-04 21:08:52,733 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - ==> Parameters: super管理员(String)
+2020-07-04 21:08:52,783 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUser] - <==      Total: 2
+2020-07-04 21:08:52,784 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforId] - ==>  Preparing: select * from t_users tu inner join t_user_role tur on tu.u_id=tur.userid inner join t_roles tr on tur.roleid=tr.r_id where tr.r_id=? 
+2020-07-04 21:08:52,785 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforId] - ==> Parameters: 2(Integer)
+2020-07-04 21:08:52,790 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforId] - <==      Total: 3
+2020-07-04 21:08:52,791 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserNotforId] - ==>  Preparing: select * from t_users tu inner join t_user_role tur on tu.u_id=tur.userid inner join t_roles tr on tur.roleid=tr.r_id where tr.r_id!=3 
+2020-07-04 21:08:52,792 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserNotforId] - ==> Parameters: 
+2020-07-04 21:08:52,797 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserNotforId] - <==      Total: 5
+2020-07-04 21:08:52,798 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforCount] - ==>  Preparing: select count(distinct userid) from t_user_role 
+2020-07-04 21:08:52,798 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforCount] - ==> Parameters: 
+2020-07-04 21:08:52,800 [main] DEBUG [demo.dao.IRoleAndUserDAO.queryAllUserforCount] - <==      Total: 1
